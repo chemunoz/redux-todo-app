@@ -16,12 +16,15 @@ export class TodoFooterComponent implements OnInit {
     filtrosValidos.Pendientes,
   ];
 
+  public pendientes: number = 0;
+
   constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
-    this.store
-      .select('filtro')
-      .subscribe((filtro) => (this.filtroActual = filtro));
+    this.store.subscribe((store) => {
+      this.filtroActual = store.filtro;
+      this.pendientes = store.todos.filter((todo) => !todo.completado).length;
+    });
   }
 
   public cambiarFiltro(filtro: filtrosValidos): void {
