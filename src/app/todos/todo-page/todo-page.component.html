@@ -3,8 +3,13 @@
 
   <!-- This section should be hidden by default and shown when there are todos -->
   <section class="main">
-    <input id="toggle-all" class="toggle-all" type="checkbox" />
-    <label for="toggle-all">Mark all as complete</label>
+    <input
+      id="toggle-all"
+      class="toggle-all"
+      type="checkbox"
+      (click)="toggleAll()"
+    />
+    <label id="toggle-all-label" for="toggle-all">Mark all as complete</label>
     <app-todo-list></app-todo-list>
   </section>
 
