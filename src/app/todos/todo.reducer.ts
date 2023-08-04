@@ -3,6 +3,7 @@ import {
   borrar,
   crear,
   editar,
+  limpiarCompletados,
   toggleCompletado,
   toggleCompletadoAll,
 } from './todo.actions';
@@ -47,5 +48,8 @@ export const todoReducer = createReducer(
   }),
   on(borrar, (state: Todo[], { id }) => {
     return state.filter((todo) => todo.id !== id);
-  })
+  }),
+  on(limpiarCompletados, (state: Todo[]) =>
+    state.filter((todo) => !todo.completado)
+  )
 );

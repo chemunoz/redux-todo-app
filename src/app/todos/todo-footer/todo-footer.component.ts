@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/app.state';
 import { filtrosValidos, setFiltro } from 'src/app/filtro/filtro.actions';
+import { limpiarCompletados } from '../todo.actions';
 
 @Component({
   selector: 'app-todo-footer',
@@ -29,5 +30,9 @@ export class TodoFooterComponent implements OnInit {
 
   public cambiarFiltro(filtro: filtrosValidos): void {
     this.store.dispatch(setFiltro({ filtro }));
+  }
+
+  public limpiarCompletados(): void {
+    this.store.dispatch(limpiarCompletados());
   }
 }
