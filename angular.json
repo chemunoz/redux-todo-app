@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "redux-todo-app:build:production"
+              "buildTarget": "redux-todo-app:build:production"
             },
             "development": {
-              "browserTarget": "redux-todo-app:build:development"
+              "buildTarget": "redux-todo-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "redux-todo-app:build"
+            "buildTarget": "redux-todo-app:build"
           }
         },
         "test": {
