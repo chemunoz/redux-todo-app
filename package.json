@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "update": "ng update @angular/core@18 @angular/cli@18"
+    "update": "ng update @angular/core@18 @angular/cli@18",
+    "updatex": "ng update @ngrx/store@latest @ngrx/effects@latest @ngrx/entity@latest @ngrx/store-devtools@latest"
   },
   "private": true,
   "dependencies": {
